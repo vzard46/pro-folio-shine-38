@@ -3,8 +3,16 @@ import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent animate-pulse"></div>
+      
+      {/* Animated particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-3/4 left-3/4 w-1 h-1 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-white/35 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/6 right-1/4 w-2 h-2 bg-white/25 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+      </div>
       
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-float blur-sm"></div>

@@ -53,11 +53,6 @@ const Services = () => {
                     <p className="text-gray-300 leading-relaxed">{service.description}</p>
                   </div>
                   
-                  <div className="aspect-video bg-slate-800 rounded-lg overflow-hidden border border-white/10">
-                    <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-purple-600/20 flex items-center justify-center">
-                      <IconComponent className="w-12 h-12 text-white/30" />
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             );
