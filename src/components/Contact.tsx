@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section className="py-20 bg-slate-900 relative overflow-hidden" id="contact">
+  return <section className="py-20 bg-slate-900 relative overflow-hidden" id="contact">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-purple-500/10 to-pink-500/10"></div>
@@ -34,7 +32,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <p className="text-white font-medium">abhimanyu.mudaliyar@email.com</p>
+                      <p className="text-white font-medium">maggiehair2004@gmail.com</p>
                     </div>
                   </div>
                   
@@ -44,7 +42,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Phone</p>
-                      <p className="text-white font-medium">+91 98765 43210</p>
+                      <p className="text-white font-medium">+91 8097258145</p>
                     </div>
                   </div>
                   
@@ -62,16 +60,10 @@ const Contact = () => {
                 <div className="mt-8 pt-8 border-t border-white/10">
                   <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
                   <div className="flex gap-4">
-                    <a 
-                      href="#" 
-                      className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                    >
+                    <a href="#" className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110">
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a 
-                      href="#" 
-                      className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                    >
+                    <a href="#" className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110">
                       <Github className="w-5 h-5" />
                     </a>
                   </div>
@@ -81,7 +73,9 @@ const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-scale-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-8">Send Message</h3>
@@ -90,36 +84,22 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-gray-300 text-sm font-medium mb-2 block">Name</label>
-                      <Input 
-                        placeholder="Your Name" 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400"
-                      />
+                      <Input placeholder="Your Name" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400" />
                     </div>
                     <div>
                       <label className="text-gray-300 text-sm font-medium mb-2 block">Email</label>
-                      <Input 
-                        type="email" 
-                        placeholder="your.email@example.com" 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400"
-                      />
+                      <Input type="email" placeholder="your.email@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400" />
                     </div>
                   </div>
                   
                   <div>
                     <label className="text-gray-300 text-sm font-medium mb-2 block">Subject</label>
-                    <Input 
-                      placeholder="Project Discussion" 
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400"
-                    />
+                    <Input placeholder="Project Discussion" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400" />
                   </div>
                   
                   <div>
                     <label className="text-gray-300 text-sm font-medium mb-2 block">Message</label>
-                    <Textarea 
-                      placeholder="Tell me about your project..." 
-                      rows={5}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400 resize-none"
-                    />
+                    <Textarea placeholder="Tell me about your project..." rows={5} className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400 resize-none" />
                   </div>
                   
                   <Button className="hero-button w-full">
@@ -132,8 +112,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

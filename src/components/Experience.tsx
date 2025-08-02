@@ -1,28 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, MapPin } from "lucide-react";
-
 const Experience = () => {
-  const experiences = [
-    {
-      title: "Fresher",
-      company: "Available for Opportunities",
-      location: "Remote/On-site",
-      period: "2024 - Present",
-      type: "Full-time",
-      description: "Passionate UX/UI designer seeking opportunities to create meaningful digital experiences. Ready to bring fresh perspectives and modern design thinking to innovative projects.",
-      responsibilities: [
-        "Creating user-centered design solutions",
-        "Prototyping and wireframing in Figma",
-        "Collaborating with development teams",
-        "Conducting user research and testing"
-      ],
-      skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-white relative overflow-hidden" id="experience">
+  const experiences = [{
+    title: "Fresher",
+    company: "Available for Opportunities",
+    location: "Remote/On-site",
+    period: "2024 - Present",
+    type: "Full-time",
+    description: "Passionate UX/UI designer seeking opportunities to create meaningful digital experiences. Ready to bring fresh perspectives and modern design thinking to innovative projects.",
+    responsibilities: ["Creating user-centered design solutions", "Prototyping and wireframing in Figma", "Collaborating with development teams", "Conducting user research and testing"],
+    skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
+  }];
+  return <section className="py-20 bg-white relative overflow-hidden" id="experience">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Work Experience</h2>
@@ -30,12 +20,9 @@ const Experience = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
-            <Card 
-              key={index}
-              className="section-card animate-scale-in mb-8"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          {experiences.map((exp, index) => <Card key={index} className="section-card animate-scale-in mb-8" style={{
+          animationDelay: `${index * 0.2}s`
+        }}>
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Company Info */}
@@ -60,7 +47,7 @@ const Experience = () => {
                           {exp.type}
                         </Badge>
                       </div>
-                      <p className="font-medium text-gray-800">{exp.period}</p>
+                      
                     </div>
                   </div>
                   
@@ -71,38 +58,27 @@ const Experience = () => {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Focus Areas</h4>
                       <ul className="space-y-2">
-                        {exp.responsibilities.map((resp, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-gray-700">
+                        {exp.responsibilities.map((resp, idx) => <li key={idx} className="flex items-start gap-3 text-gray-700">
                             <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
                             <span>{resp}</span>
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
                     
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Skills & Technologies</h4>
                       <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill) => (
-                          <Badge 
-                            key={skill} 
-                            variant="secondary"
-                            className="bg-gray-100 text-gray-700 hover:bg-gray-200"
-                          >
+                        {exp.skills.map(skill => <Badge key={skill} variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
                             {skill}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Experience;
