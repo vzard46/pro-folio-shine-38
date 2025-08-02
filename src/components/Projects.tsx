@@ -32,28 +32,31 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="group section-card hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/10 hover:to-primary/10"
+              className="group section-card hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/20 hover:to-primary/20"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-600 group-hover:text-gray-100 leading-relaxed mb-6 transition-colors duration-300">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge 
-                        key={tech}
-                        variant="secondary" 
-                        className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-300"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 group-hover:text-white mb-3 transition-colors duration-300">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <Badge 
+                          key={tech}
+                          variant="outline" 
+                          className="bg-primary/10 text-primary border-primary/30 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/50 transition-all duration-300"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </CardContent>

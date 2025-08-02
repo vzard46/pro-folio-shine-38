@@ -29,7 +29,7 @@ const Certifications = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((cert, index) => <Card key={cert.title} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/10 hover:to-accent/10" style={{
+          {certifications.map((cert, index) => <Card key={cert.title} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20" style={{
           animationDelay: `${index * 0.2}s`
         }}>
               <CardContent className="p-6">
@@ -38,8 +38,8 @@ const Certifications = () => {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">{cert.title}</h3>
-                    <p className="text-orange-500 font-medium">{cert.issuer}</p>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-1 transition-colors duration-300">{cert.title}</h3>
+                    <p className="text-orange-500 group-hover:text-orange-200 font-medium transition-colors duration-300">{cert.issuer}</p>
                   </div>
                 </div>
                 
@@ -48,12 +48,15 @@ const Certifications = () => {
                   
                 </div>
                 
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">{cert.description}</p>
+                <p className="text-gray-700 group-hover:text-gray-100 mb-4 text-sm leading-relaxed transition-colors duration-300">{cert.description}</p>
                 
-                <div className="flex flex-wrap gap-2">
-                  {cert.skills.map(skill => <Badge key={skill} variant="secondary" className="text-xs bg-orange-100 text-orange-700 hover:bg-orange-200">
-                      {skill}
-                    </Badge>)}
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 group-hover:text-white mb-2 transition-colors duration-300">Skills Gained</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {cert.skills.map(skill => <Badge key={skill} variant="outline" className="text-xs bg-orange-100 text-orange-700 border-orange-200 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/50 transition-all duration-300">
+                        {skill}
+                      </Badge>)}
+                  </div>
                 </div>
               </CardContent>
             </Card>)}

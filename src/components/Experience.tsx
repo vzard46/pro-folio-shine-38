@@ -4,21 +4,11 @@ import { Briefcase, MapPin } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "UX/UI Design Intern",
-      company: "Tech Startup",
-      location: "Remote",
-      period: "Jun 2024 - Dec 2024",
-      type: "Internship",
-      description: "Gained hands-on experience in user interface design and user experience research. Worked on mobile app redesign project that improved user engagement by 30%.",
-      responsibilities: ["Designed wireframes and prototypes using Figma", "Conducted user research and usability testing", "Collaborated with development team on design implementation", "Created design systems and component libraries"],
-      skills: ["Figma", "User Research", "Prototyping", "Design Systems"]
-    },
-    {
       title: "Fresher",
       company: "Available for Opportunities",
       location: "Remote/On-site",
       period: "2024 - Present",
-      type: "Full-time",
+      type: ["Full-time", "Internship"],
       description: "Passionate UX/UI designer seeking opportunities to create meaningful digital experiences. Ready to bring fresh perspectives and modern design thinking to innovative projects.",
       responsibilities: ["Creating user-centered design solutions", "Prototyping and wireframing in Figma", "Collaborating with development teams", "Conducting user research and testing"],
       skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
@@ -54,10 +44,12 @@ const Experience = () => {
                         <MapPin className="w-4 h-4" />
                         <span>{exp.location}</span>
                       </div>
-                      <div>
-                        <Badge variant="outline" className="bg-orange-50 text-orange-700 border-orange-200">
-                          {exp.type}
-                        </Badge>
+                      <div className="flex flex-wrap gap-2">
+                        {(Array.isArray(exp.type) ? exp.type : [exp.type]).map((type) => (
+                          <Badge key={type} variant="outline" className="bg-orange-50 text-orange-700 border-orange-200">
+                            {type}
+                          </Badge>
+                        ))}
                       </div>
                       
                     </div>
