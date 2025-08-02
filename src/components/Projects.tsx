@@ -32,7 +32,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="group section-card hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up"
+              className="group section-card hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/10 hover:to-primary/10"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-8">

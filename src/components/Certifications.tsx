@@ -29,7 +29,7 @@ const Certifications = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((cert, index) => <Card key={cert.title} className="section-card group hover:shadow-elegant animate-fade-in-up" style={{
+          {certifications.map((cert, index) => <Card key={cert.title} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/10 hover:to-accent/10" style={{
           animationDelay: `${index * 0.2}s`
         }}>
               <CardContent className="p-6">

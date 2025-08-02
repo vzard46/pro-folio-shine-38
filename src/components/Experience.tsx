@@ -2,16 +2,28 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, MapPin } from "lucide-react";
 const Experience = () => {
-  const experiences = [{
-    title: "Fresher",
-    company: "Available for Opportunities",
-    location: "Remote/On-site",
-    period: "2024 - Present",
-    type: "Full-time",
-    description: "Passionate UX/UI designer seeking opportunities to create meaningful digital experiences. Ready to bring fresh perspectives and modern design thinking to innovative projects.",
-    responsibilities: ["Creating user-centered design solutions", "Prototyping and wireframing in Figma", "Collaborating with development teams", "Conducting user research and testing"],
-    skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
-  }];
+  const experiences = [
+    {
+      title: "UX/UI Design Intern",
+      company: "Tech Startup",
+      location: "Remote",
+      period: "Jun 2024 - Dec 2024",
+      type: "Internship",
+      description: "Gained hands-on experience in user interface design and user experience research. Worked on mobile app redesign project that improved user engagement by 30%.",
+      responsibilities: ["Designed wireframes and prototypes using Figma", "Conducted user research and usability testing", "Collaborated with development team on design implementation", "Created design systems and component libraries"],
+      skills: ["Figma", "User Research", "Prototyping", "Design Systems"]
+    },
+    {
+      title: "Fresher",
+      company: "Available for Opportunities",
+      location: "Remote/On-site",
+      period: "2024 - Present",
+      type: "Full-time",
+      description: "Passionate UX/UI designer seeking opportunities to create meaningful digital experiences. Ready to bring fresh perspectives and modern design thinking to innovative projects.",
+      responsibilities: ["Creating user-centered design solutions", "Prototyping and wireframing in Figma", "Collaborating with development teams", "Conducting user research and testing"],
+      skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
+    }
+  ];
   return <section className="py-20 bg-white relative overflow-hidden" id="experience">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
@@ -20,7 +32,7 @@ const Experience = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => <Card key={index} className="section-card animate-scale-in mb-8" style={{
+         {experiences.map((exp, index) => <Card key={index} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-scale-in mb-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/10 hover:to-accent/10" style={{
           animationDelay: `${index * 0.2}s`
         }}>
               <CardContent className="p-8">

@@ -21,11 +21,11 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Card 
               key={skill}
-              className="group section-card hover:bg-primary/5 hover:-translate-y-2 transition-all duration-300 cursor-pointer animate-fade-in-up"
+              className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/10 hover:to-accent/10"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary group-hover:scale-105 transition-all duration-300">
                   {skill}
                 </h3>
               </CardContent>
