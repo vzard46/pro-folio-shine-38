@@ -32,7 +32,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="group section-card hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/20 hover:to-primary/20"
+              className="group section-card hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/80 hover:to-primary/80"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-8">
@@ -40,7 +40,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 group-hover:text-gray-100 leading-relaxed mb-6 transition-colors duration-300">
+                  <p className="text-gray-600 group-hover:text-gray-200 leading-relaxed mb-6 transition-colors duration-300">
                     {project.description}
                   </p>
                   
@@ -51,7 +51,7 @@ const Projects = () => {
                         <Badge 
                           key={tech}
                           variant="outline" 
-                          className="bg-primary/10 text-primary border-primary/30 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/50 transition-all duration-300"
+                          className="bg-primary/10 text-primary border-primary/30 group-hover:bg-white group-hover:text-primary group-hover:border-white transition-all duration-300"
                         >
                           {tech}
                         </Badge>

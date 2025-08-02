@@ -29,7 +29,7 @@ const Certifications = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((cert, index) => <Card key={cert.title} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20" style={{
+          {certifications.map((cert, index) => <Card key={cert.title} className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/80 hover:to-accent/80" style={{
           animationDelay: `${index * 0.2}s`
         }}>
               <CardContent className="p-6">
@@ -48,12 +48,12 @@ const Certifications = () => {
                   
                 </div>
                 
-                <p className="text-gray-700 group-hover:text-gray-100 mb-4 text-sm leading-relaxed transition-colors duration-300">{cert.description}</p>
+                <p className="text-gray-700 group-hover:text-gray-200 mb-4 text-sm leading-relaxed transition-colors duration-300">{cert.description}</p>
                 
                 <div>
                   <h4 className="text-sm font-semibold text-gray-900 group-hover:text-white mb-2 transition-colors duration-300">Skills Gained</h4>
                   <div className="flex flex-wrap gap-2">
-                    {cert.skills.map(skill => <Badge key={skill} variant="outline" className="text-xs bg-orange-100 text-orange-700 border-orange-200 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/50 transition-all duration-300">
+                    {cert.skills.map(skill => <Badge key={skill} variant="outline" className="text-xs bg-orange-100 text-orange-700 border-orange-200 group-hover:bg-white group-hover:text-orange-700 group-hover:border-white transition-all duration-300">
                         {skill}
                       </Badge>)}
                   </div>

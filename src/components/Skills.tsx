@@ -42,19 +42,19 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Card 
               key={skill.name}
-              className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20"
+              className="group section-card hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 hover:border-accent/50 hover:bg-gradient-to-br hover:from-primary/80 hover:to-accent/80"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 group-hover:text-white mb-3 transition-all duration-300">
                   {skill.name}
                 </h3>
-                <p className="text-gray-600 group-hover:text-gray-100 mb-4 transition-colors duration-300">
+                <p className="text-gray-600 group-hover:text-gray-200 mb-4 transition-colors duration-300">
                   {skill.category}
                 </p>
                 <Badge 
                   variant="outline" 
-                  className="bg-primary/10 text-primary border-primary/30 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/50 transition-all duration-300"
+                  className="bg-primary/10 text-primary border-primary/30 group-hover:bg-white group-hover:text-primary group-hover:border-white transition-all duration-300"
                 >
                   {skill.level}
                 </Badge>
